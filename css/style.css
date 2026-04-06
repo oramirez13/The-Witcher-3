@@ -1,0 +1,153 @@
+/* ============================================================
+   style.css — Estilos personalizados para The Witcher 3
+   Curso: CLV-0062 | Universidad Fidélitas
+   Nota: Este archivo carga DESPUÉS de Bootstrap,
+         por eso puede sobrescribir sus estilos si es necesario
+   ============================================================ */
+
+
+/* ==================== ESTILOS GLOBALES ==================== */
+
+html {
+  font-family: monospace;   /* Fuente principal: estilo máquina de escribir */
+  scroll-behavior: smooth;  /* Desplazamiento suave al hacer clic en enlaces ancla (#id) */
+}
+
+body {
+  margin: 0;                    /* Elimina el margen por defecto del navegador */
+  background-color: #efefef;    /* Fondo general de la página: gris claro */
+}
+
+
+/* ==================== HEADER ==================== */
+
+header {
+  background-color: #364552;  /* Azul grisáceo oscuro: paleta del universo Witcher */
+  color: #fff;                 /* Texto blanco para contraste con el fondo oscuro */
+  padding: 3rem 2rem;          /* Espaciado interno: 3rem arriba/abajo, 2rem izquierda/derecha */
+}
+
+h1 {
+  font-size: 4rem;      /* Tamaño grande para el título principal */
+  text-align: center;   /* Centra el texto del h1 */
+}
+
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+
+/* NOTA: Bootstrap ya tiene su propia clase .container.
+   Este bloque la sobrescribe con valores personalizados.
+   Si en el futuro se quiere usar el .container de Bootstrap tal cual,
+   renombrar esta clase a algo como .mi-contenedor */
+.container {
+  width: 90%;          /* Ocupa el 90% del ancho disponible */
+  max-width: 400px;    /* Nunca superará los 400px de ancho */
+  margin: 0 auto;      /* Centra el contenedor horizontalmente en la página */
+}
+
+
+/* ==================== ARTÍCULOS / TARJETAS ==================== */
+
+section article {
+  transition: box-shadow 0.3s ease;   /* Animación suave de 0.3s al cambiar la sombra */
+  background-color: #fff;             /* Fondo blanco para cada tarjeta */
+  margin: 1rem 0;                     /* Separación de 1rem entre tarjetas */
+  border-radius: 0.5rem;              /* Bordes redondeados */
+  padding: 0.25rem 0;                 /* Espaciado interno pequeño arriba y abajo */
+  cursor: pointer;                    /* El cursor cambia a manita al pasar encima */
+}
+
+section article:hover {
+  /* Sombra que aparece cuando el usuario pasa el mouse por encima */
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+  /* rgba(0,0,0,0.3): negro con 30% de opacidad — sombra suave y elegante */
+}
+
+
+/* ==================== IMÁGENES ==================== */
+
+section article img {
+  max-width: 100%;     /* La imagen nunca supera el ancho de su contenedor */
+  height: auto;        /* Alto automático: mantiene la proporción original */
+  display: block;      /* Elimina el espacio inferior que tienen las imágenes inline */
+  margin: 0 auto;      /* Centra la imagen horizontalmente dentro del artículo */
+}
+
+
+/* ==================== CLASES DE TEXTO PERSONALIZADAS ==================== */
+
+/* Clase usada en los h2 de cada sección (definida en index.html como class="texto") */
+.texto {
+  font-size: 1.2rem;      /* Tamaño del subtítulo ligeramente mayor al normal */
+  padding: 0.5rem 1rem;   /* Espaciado interno: da aire al texto */
+  color: #364552;         /* Mismo azul grisáceo del header: coherencia visual */
+}
+
+/* Clase usada en los párrafos de cada sección (definida en index.html como class="text") */
+.text {
+  font-size: 0.95rem;       /* Tamaño de párrafo ligeramente menor al base */
+  padding: 0 1rem;          /* Sangría lateral: alinea el texto con el h2 */
+  line-height: 1.6;         /* Espaciado entre líneas: mejora la legibilidad */
+  color: #333;              /* Gris oscuro: menos agresivo que el negro puro */
+  text-align: justify;      /* Justifica el texto: alinea ambos márgenes izquierdo y derecho */
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer {
+  background-color: #222;      /* Fondo oscuro para el pie de página */
+  padding: 2rem;               /* Espaciado interno de 2rem en todos los lados */
+  color: #fff;                 /* Texto blanco para contraste */
+
+  /* Flexbox mobile-first: en pantallas pequeñas los elementos se apilan */
+  display: flex;
+  flex-direction: column;      /* Columna en mobile: elementos uno debajo del otro */
+  align-items: center;         /* Centra los elementos horizontalmente */
+  gap: 1rem;                   /* Separación uniforme entre cada elemento hijo */
+}
+
+/* Sección interna del footer: contiene los enlaces de navegación */
+footer section {
+  display: flex;               /* Flexbox para los enlaces */
+  flex-direction: column;      /* En mobile los enlaces también se apilan */
+  align-items: center;         /* Centra los enlaces */
+  gap: 0.75rem;                /* Separación entre "back to top" y "contact me" */
+}
+
+/* Media query: se activa en pantallas de 600px o más (tablets y escritorio) */
+@media (min-width: 600px) {
+
+  footer {
+    flex-direction: row;            /* En desktop: elementos en fila horizontal */
+    justify-content: space-around;  /* Distribuye el espacio entre los elementos */
+    align-items: center;            /* Alinea verticalmente al centro */
+    /* gap heredado del bloque base sigue funcionando en modo row */
+  }
+
+  footer section {
+    flex-direction: row;    /* Los enlaces se ponen en fila en desktop */
+    gap: 1.5rem;            /* Mayor separación entre enlaces en pantallas grandes */
+    align-items: center;    /* Alinea los enlaces verticalmente al centro */
+  }
+}
+
+/* Estilo de todos los enlaces dentro del footer */
+footer a {
+  color: #fff;                  /* Color blanco para los enlaces */
+  text-decoration: none;        /* Elimina el subrayado por defecto */
+  font-size: 0.9rem;            /* Tamaño de fuente ligeramente reducido */
+  transition: color 0.2s ease;  /* Animación suave al cambiar de color en hover */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces del footer */
+footer a:hover {
+  color: #aaaaaa;   /* Gris claro: retroalimentación visual sin necesitar JavaScript */
+}
+
+/* Estilo del párrafo de copyright */
+footer p {
+  margin: 0;           /* Elimina el margen por defecto del elemento <p> */
+  font-size: 0.85rem;  /* Texto de copyright más pequeño para no competir visualmente */
+  color: #aaaaaa;      /* Gris claro: menos prominente que los enlaces */
+}

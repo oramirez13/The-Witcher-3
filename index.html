@@ -1,0 +1,213 @@
+<!doctype html>
+<!-- Declaración del tipo de documento: indica al navegador que es HTML5 -->
+
+<html lang="es">
+  <!-- Etiqueta raíz del documento; lang="es" indica que el contenido está en español -->
+
+  <head>
+    <!-- Sección de metadatos: no visible en pantalla, pero esencial para el navegador -->
+
+    <meta charset="UTF-8" />
+    <!-- Define la codificación UTF-8: permite tildes, ñ y símbolos especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Hace la página responsiva: adapta el ancho al dispositivo y escala inicial al 100% -->
+
+    <title>The Witcher 3</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <!--Bootstrap/css-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Carga Bootstrap 4.3.1 desde CDN -->
+    <!-- integrity: hash SHA para verificar que el archivo no fue alterado -->
+    <!-- crossorigin="anonymous": verifica sin enviar credenciales del usuario -->
+
+    <!--css/style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Estilos personalizados del proyecto -->
+    <!-- Siempre DESPUÉS de Bootstrap para poder sobrescribir sus estilos -->
+  </head>
+
+  <body>
+    <!-- Inicio del cuerpo: aquí va todo el contenido visible de la página -->
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+      <!-- Encabezado principal de la página -->
+
+      <h1 class="text-center" id="title">The Witcher 3</h1>
+      <!-- h1: título principal; solo debe haber uno por página (buena práctica SEO) -->
+      <!-- text-center: clase Bootstrap que centra el texto horizontalmente -->
+      <!-- id="title": identificador único, usado como ancla para el enlace "back to top" -->
+    </header>
+
+    <!-- ==================== SECCIÓN 1: Presentación del juego ==================== -->
+    <section class="container my-4">
+      <!-- section: agrupa contenido temáticamente relacionado -->
+      <!-- container: clase Bootstrap que centra y limita el ancho del contenido -->
+      <!-- my-4: margen vertical (arriba y abajo) de Bootstrap, escala del 0 al 5 -->
+
+      <article class="card-articulo">
+        <!-- article: bloque de contenido independiente y reutilizable -->
+        <!-- card-articulo: clase personalizada definida en style.css -->
+
+        <h2 class="texto">The Witcher 3: The Wild Hunt</h2>
+        <!-- h2: subtítulo de sección; jerarquía correcta después del h1 -->
+        <!-- texto: clase personalizada para estilos de subtítulo -->
+
+        <p class="text">
+          <!-- p: párrafo de texto descriptivo -->
+          <!-- text: clase personalizada para estilos de párrafo -->
+          The Witcher 3: Wild Hunt is the third and final installment in the
+          series of games developed by CD PROJEKT RED featuring the witcher
+          Geralt of Rivia. The game was originally scheduled for release in late
+          2014, then pushed back to 24 February 2015, and finally released on 19
+          May 2015.
+        </p>
+
+        <img
+          src="img/TheWitcher3_3.png"
+          class="img-fluid d-block mx-auto"
+          alt="Witcher 3 Main"
+        />
+        <!-- img: muestra la imagen del juego -->
+        <!-- src: ruta relativa desde index.html hacia la carpeta img/ -->
+        <!-- img-fluid: Bootstrap hace la imagen responsiva (max-width: 100%) -->
+        <!-- d-block: display block, la imagen ocupa su propia línea -->
+        <!-- mx-auto: margen horizontal automático, centra la imagen -->
+        <!-- alt: texto alternativo para accesibilidad y si la imagen no carga -->
+      </article>
+    </section>
+
+    <!-- ==================== SECCIÓN 2: Imagen de gameplay ==================== -->
+    <section class="container my-4">
+      <article class="card-articulo">
+        <h2 class="texto">The Witcher 3: The Wild Hunt</h2>
+
+        <img
+          src="img/TheWitcher3_2.png"
+          class="img-fluid d-block mx-auto"
+          alt="Gameplay Screen"
+        />
+        <!-- Sección de solo imagen: el h2 da contexto semántico a la sección -->
+      </article>
+    </section>
+
+    <!-- ==================== SECCIÓN 3: Mapa del mundo ==================== -->
+    <section class="container my-4">
+      <article class="card-articulo">
+        <h2 class="texto">The Witcher 3: The Wild Hunt</h2>
+
+        <img
+          src="img/TheWitcher3_1.png"
+          class="img-fluid d-block mx-auto"
+          alt="World Map"
+        />
+      </article>
+    </section>
+
+    <!-- ==================== SECCIÓN 4: Expansiones ==================== -->
+    <section class="container my-4">
+      <article class="card-articulo">
+        <h2 class="texto">The Witcher 3: The Wild Hunt</h2>
+
+        <p class="text">
+          On April 7, 2015, CD PROJEKT RED announced two major expansions for
+          The Witcher 3: Wild Hunt, entitled Hearts of Stone and Blood and Wine.
+        </p>
+
+        <img
+          src="img/TheWitcher3_4.png"
+          class="img-fluid d-block mx-auto"
+          alt="Expansions"
+        />
+      </article>
+    </section>
+
+    <!-- ==================== SECCIÓN 5: Blood and Wine ==================== -->
+    <section class="container my-4">
+      <article class="card-articulo">
+        <h2 class="texto">The Witcher 3: The Wild Hunt</h2>
+
+        <p class="text">
+          Blood and Wine is a major expansion that adds over twenty hours of
+          additional content. A tale that will introduce the all-new in-game
+          region of Toussaint.
+        </p>
+
+        <img
+          src="img/TheWitcher3_5.jpg"
+          class="img-fluid d-block mx-auto"
+          alt="Toussaint"
+        />
+        <!-- Nota: esta imagen es .jpg, las demás son .png -->
+        <!-- Ambos formatos son válidos; src debe coincidir exactamente con el nombre del archivo -->
+      </article>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <!-- Pie de página con navegación y créditos -->
+
+      <section>
+        <!-- Agrupa los enlaces de navegación dentro del footer -->
+
+        <a href="#title">back to top</a>
+        <!-- href="#title": ancla que lleva al elemento con id="title" (el h1) -->
+
+        <a href="mailto:oramirezmg@gmail.com">contact me</a>
+        <!-- mailto: abre el cliente de correo con el destinatario prellenado -->
+      </section>
+
+      <p>copyright 2024</p>
+      <!-- Aviso de derechos de autor -->
+
+      <a
+        target="_blank"
+        href="https://witcher.fandom.com/wiki/The_Witcher_3:_Wild_Hunt"
+        >visit witcher.fandom.com</a
+      >
+      <!-- target="_blank": abre el enlace en una nueva pestaña del navegador -->
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- Los scripts van AL FINAL del body: el HTML carga primero, luego el JS -->
+
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery debe ir PRIMERO: Bootstrap y nuestro script.js dependen de él -->
+
+    <!--Bootstrap/popper-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.js: necesario para posicionar tooltips y dropdowns de Bootstrap -->
+
+    <!--Bootstrap/js-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS: activa los componentes interactivos de Bootstrap -->
+    <!-- Orden obligatorio: jQuery → Popper → Bootstrap JS -->
+
+    <!-- js/script.js -->
+    <script src="js/script.js" type="text/javascript"></script>
+    <!-- Nuestro script personalizado siempre al último -->
+    <!-- Así puede usar jQuery y Bootstrap que ya cargaron antes -->
+  </body>
+  <!-- Fin del cuerpo del documento -->
+</html>
+<!-- Fin del documento HTML -->
